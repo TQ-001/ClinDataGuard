@@ -1,0 +1,78 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+wheels/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+.env/
+ENV/
+
+# ── Generated reports and data exports ───────────────────────────────────────
+# Any CSV that was exported by the app (issues reports, summary exports)
+clindataguard_issues.csv
+clindataguard_summary.json
+# Any locally generated or uploaded patient data
+sample_data.csv
+*.report.csv
+*.report.json
+# Output directories sometimes created during ad-hoc testing
+output/
+reports/
+exports/
+
+# ── Uploaded / real patient data ──────────────────────────────────────────────
+# Never commit real clinical CSVs. Synthetic test data lives in the test suite only.
+data/
+uploads/
+*.patient.csv
+*.clinical.csv
+
+# ── Pytest / coverage ─────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+.hypothesis/
+
+# ── Streamlit ─────────────────────────────────────────────────────────────────
+.streamlit/secrets.toml
+
+# ── IDEs and editors ──────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Jupyter (if ever added) ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Secrets / credentials ─────────────────────────────────────────────────────
+.env
+*.pem
+*.key
+secrets.yaml
+secrets.json

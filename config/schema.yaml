@@ -1,0 +1,120 @@
+# ClinDataGuard – Field Schema Definition
+# Each field defines: type, required, aliases, and (where applicable) range or categories.
+
+fields:
+  patient_id:
+    type: string
+    required: true
+    aliases:
+      - id
+      - pat_id
+      - subject_id
+      - patientid
+      - patient_identifier
+
+  age:
+    type: integer
+    required: true
+    range:
+      min: 0
+      max: 120
+    aliases:
+      - age_years
+      - age_yr
+      - patient_age
+
+  sex:
+    type: string
+    required: true
+    categories:
+      - Male
+      - Female
+      - Other
+    aliases:
+      - gender
+      - sex_at_birth
+      - biological_sex
+
+  bmi:
+    type: float
+    required: true
+    range:
+      min: 10.0
+      max: 70.0
+    aliases:
+      - body_mass_index
+      - bmi_kgm2
+      - BMI
+
+  smoking_status:
+    type: string
+    required: true
+    categories:
+      - Never
+      - Former
+      - Current
+    aliases:
+      - smoke_status
+      - smoker_status
+      - smoking
+      - tobacco_status
+
+  pack_years:
+    type: float
+    required: false
+    range:
+      min: 0.0
+      max: 300.0
+    aliases:
+      - packyears
+      - pack_yr
+      - pack_yrs
+      - cigarette_pack_years
+
+  fev1_percent_predicted:
+    type: float
+    required: true
+    range:
+      min: 10.0
+      max: 200.0
+    aliases:
+      - fev1_pp
+      - fev1pp
+      - fev1%pred
+      - fev1_pct_pred
+      - fev1_percent
+      - fev1_pct
+      - fev1_%predicted
+      - percent_predicted_fev1
+      - fev1_predicted_pct
+
+  baseline_cvd:
+    type: string
+    required: true
+    categories:
+      - "Yes"
+      - "No"
+    aliases:
+      - cvd
+      - cvd_baseline
+      - cardiovascular_disease
+      - baseline_cardiovascular
+
+  ct_date:
+    type: date
+    required: true
+    aliases:
+      - ct_scan_date
+      - scan_date
+      - baseline_ct_date
+      - ctdate
+
+  followup_date:
+    type: date
+    required: true
+    aliases:
+      - follow_up_date
+      - followup
+      - fu_date
+      - follow_date
+      - followupdate
